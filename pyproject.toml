@@ -1,0 +1,43 @@
+[project]
+name = "backyard-sun-map"
+version = "0.1.0"
+description = "Backyard sun exposure modeling tool"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Backyard Tool" }]
+dependencies = [
+    "numpy",
+    "shapely",
+    "matplotlib",
+    "pyyaml",
+    "pvlib",
+    "pysolar",
+    "ty>=0.0.1a27",
+    "ruff>=0.14.6",
+    "click>=8.3.1",
+]
+
+[project.scripts]
+sun_map = "backyard_sun_map.cli:main"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+packages = ["backyard_sun_map"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["backyard_sun_map"]
+
+[tool.ty]

@@ -1,0 +1,43 @@
+location:
+  latitude: 29.98
+  longitude: -90.08
+  timezone: "America/Chicago"
+
+orientation_deg_cw_from_north: 35.0
+
+bounds:
+  x_min: null
+  x_max: null
+  y_min: null
+  y_max: null
+  padding_ft: 6.56
+
+objects:
+  - type: "structure"
+    name: "house"
+    height_ft: 13.12
+    footprint:
+      - [0.0, 0.0]
+      - [26.25, 0.0]
+      - [26.25, 16.40]
+      - [0.0, 16.40]
+
+  - type: "fence"
+    name: "north_fence"
+    height_ft: 6.56
+    polyline:
+      - [-3.28, 19.69]
+      - [32.81, 19.69]
+
+  - type: "fence"
+    name: "west_fence"
+    height_ft: 6.0
+    polyline:
+      - [0.0, 0.0]
+      - [0.0, 50.0]
+
+  - type: "tree"
+    name: "oak"
+    height_ft: 19.69
+    center: [16.40, 9.84]
+    radius_ft: 3.28
